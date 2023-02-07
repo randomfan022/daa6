@@ -40,3 +40,19 @@ proc finish {} {
  exit 0
 }
 $ns run
+
+1.awk:
+BEGIN {
+tcp_count=0;
+udo_count=0;
+}{
+if($1 == "d" && $5 == "tcp")
+tcp_count++;
+if($1 == "d" && $5 == "cbr")
+udp_count++;
+} END {
+printf("TCP %d\n",tcp_count);
+printf("UDP %d\n",udp_count);
+}
+grep “^r” ex1.tr #packets received
+awk -f 1.awk 1.tr
