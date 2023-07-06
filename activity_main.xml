@@ -34,4 +34,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
  tools:layout_editor_absoluteX="33dp"
  tools:layout_editor_absoluteY="40dp"
  tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout> -->
+</androidx.constraintlayout.widget.ConstraintLayout>
+AndroidManifest.xml
+<uses-permission android:name="android.permission.READ_CONTACTS"/> -->
